@@ -1,6 +1,8 @@
 public class ExpenseController {
     @AuraEnabled 
     public static string createExpenses(Expense__c[] exp){
+        
+        System.debug('-----'+exp)
 
         if(exp!=null){
             insert exp;
